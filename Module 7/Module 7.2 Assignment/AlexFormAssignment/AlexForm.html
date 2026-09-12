@@ -1,0 +1,190 @@
+ <!--
+        Name: Alexander Baldree
+    PHP Form Program
+    09/12/26
+    CSD440
+
+        Purpose:
+        This page collects seven different pieces of information
+        from the user. The information is sent to AlexResponse.php
+        where PHP validates and displays the submitted data.
+    -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alex Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #1d5fa7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #164b84;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Customer Information Form</h1>
+
+        <p>Please enter all of the information below.</p>
+
+        <form action="AlexResponse.php" method="post">
+
+            <!-- Text data type -->
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+
+                <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required>
+            </div>
+
+            <!-- Text data type -->
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+
+                <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required>
+            </div>
+
+            <!-- Email data type -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required>
+            </div>
+
+            <!-- Number data type -->
+            <div class="form-group">
+                <label for="age">Age:</label>
+
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="1"
+                    max="120"
+                    required>
+            </div>
+
+            <!-- Date data type -->
+            <div class="form-group">
+                <label for="birthDate">Birth Date:</label>
+
+                <input
+                    type="date"
+                    id="birthDate"
+                    name="birthDate"
+                    required>
+            </div>
+
+            <!-- Telephone data type -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="901-555-1234"
+                    required>
+            </div>
+
+            <!-- Select/dropdown data type -->
+            <div class="form-group">
+                <label for="favoriteColor">Favorite Color:</label>
+
+                <select
+                    id="favoriteColor"
+                    name="favoriteColor"
+                    required>
+
+                    <option value="">-- Select a Color --</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Red">Red</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Black">Black</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+
+                <input
+                    type="submit"
+                    value="Submit Form">
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
